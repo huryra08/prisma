@@ -1,0 +1,469 @@
+{
+  "info": {
+    "_postman_id": "646238c0-2f34-44da-ad2d-690a05c47662",
+    "name": "prisma press backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54831390",
+    "_collection_link": "https://go.postman.co/collection/54831390-646238c0-2f34-44da-ad2d-690a05c47662?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" :\"Pkskad\",\r\n    \"email\" : \"abcd37@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"profilePhoto\": \"www.google.com\"\r\n\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get my profile",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "update profile",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" :\"Abu-huryra-16\",\r\n    \"email\" : \"abcd16@gmail.com\",\r\n    \"bio\" : \"new bio add\",\r\n    \"profilePhoto\": \"///www.facebook.com////\"\r\n\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/my-profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "my-profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"abcd@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "access-token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" :\"Abu-huryra-16\",\r\n    \"email\" : \"abcd16@gmail.com\",\r\n    \"bio\" : \"new bio add\",\r\n    \"profilePhoto\": \"///www.facebook.com////\"\r\n\r\n    \r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Create post",
+      "item": [
+        {
+          "name": "Create post",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n  \"title\": \"Backend Development post 36654 99st post for abcd3666\",\r\n  \"content\": \"Here are some best practices for building scalable APIs...\",\r\n  \"thumbnail\": \"/images/backend-tips.png\",\r\n  \"isFeatured\": false,\r\n  \"status\": \"PUBLISHED\",\r\n  \"tags\": [\"backend\", \"API\", \"scalability\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get post by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n  \"title\": \"Backend Development Tips\",\r\n  \"content\": \"Here are some best practices for building scalable APIs...\",\r\n  \"thumbnail\": \"/images/backend-tips.png\",\r\n  \"isFeatured\": false,\r\n  \"status\": \"Published\",\r\n  \"tags\": [\"backend\", \"API\", \"scalability\"]\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/posts/198a8f70-2272-4fe5-9658-a51b5162bfbe",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts",
+                "198a8f70-2272-4fe5-9658-a51b5162bfbe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get my post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/posts/my-posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts",
+                "my-posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update post",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"my post is update 966d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/posts/b9808070-301a-434a-832d-c002cd928528",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts",
+                "b9808070-301a-434a-832d-c002cd928528"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete post",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/posts/da405d15-da19-46b8-bccf-b7af96875ce2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts",
+                "da405d15-da19-46b8-bccf-b7af96875ce2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get post stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/posts/stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "posts",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comment",
+      "item": [
+        {
+          "name": "Create comment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"postId\" : \"ba405293-c0fd-4826-8630-695e71437111\",\r\n    \"authorId\": \"abcad8b0-d599-4557-aa65-3bbba0186d18\",\r\n    \"content\" : \"my frist comment\"\r\n\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Comment By All AuthorId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/author/abcad8b0-d599-4557-aa65-3bbba0186d18",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "author",
+                "abcad8b0-d599-4557-aa65-3bbba0186d18"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Comment By All Comment Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/ba405293-c0fd-4826-8630-695e71437111",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "ba405293-c0fd-4826-8630-695e71437111"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Comment",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n  \r\n    \"content\" : \"my frist && second comment\"\r\n\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/comments/195bd148-1945-4b9d-a0b9-5bd1be803302",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "195bd148-1945-4b9d-a0b9-5bd1be803302"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete Comment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/195bd148-1945-4b9d-a0b9-5bd1be803302",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "195bd148-1945-4b9d-a0b9-5bd1be803302"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "moderate Comment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/195bd148-1945-4b9d-a0b9-5bd1be803302/moderate",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "195bd148-1945-4b9d-a0b9-5bd1be803302",
+                "moderate"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
